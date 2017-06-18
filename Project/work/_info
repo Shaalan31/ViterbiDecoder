@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/altera/16.0
+vFindMin
+!s110 1482860839
+!i10b 1
+!s100 TdJdS>ESFWfI]>[6JGk7[3
+IN?0<BVn@H?AV?LXRN9NXV3
+VDg1SIo80bB@j0V0VzS_@n1
+dC:/Users/Khairy/Dropbox/KSM/Cairo University/Logic Design 2/Project
+w1482860828
+8C:/Users/Khairy/Dropbox/KSM/Cairo University/Logic Design 2/Project/FindingMinError.v
+FC:/Users/Khairy/Dropbox/KSM/Cairo University/Logic Design 2/Project/FindingMinError.v
+L0 2
+OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1482860839.000000
+!s107 C:/Users/Khairy/Dropbox/KSM/Cairo University/Logic Design 2/Project/FindingMinError.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Khairy/Dropbox/KSM/Cairo University/Logic Design 2/Project/FindingMinError.v|
+!i113 1
+o-work work
+n@find@min

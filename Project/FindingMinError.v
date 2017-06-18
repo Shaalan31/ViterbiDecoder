@@ -1,0 +1,54 @@
+
+module FindMin #(parameter N=8)(StateMinError);
+//declarations
+reg[3:0]ErrorTable[7:0][N-1:0];
+reg[2:0]HistoryTable[7:0][N-1:0];
+output reg[2:0] StateMinError;
+reg [3:0] FirstError;
+reg [2:0] i;
+reg [2:0] StateBacktracking[N-1:0];
+reg [2:0] StateBT;
+reg [N-1:0] j;
+reg [N-1:0] s;
+reg DecodedSymbol[N-1:0];
+
+//initializiation
+initial begin
+StateMinError=0;
+FirstError=ErrorTable[0][N-1];
+end
+
+always@(StateMinError) begin
+
+//1st Loop To Find State With Min Error
+for (i=1;i<8;i=i+1) begin
+	if(ErrorTable[i][N-1]<FirstError)
+	begin
+		FirstError=ErrorTable[i][N-1];
+		StateMinError=i;
+	end
+end
+
+//Needed Initializations
+StateBT=StateMinError;
+StateBacktracking[N-1]=StateMinError;
+
+//2nd Loop For BackTracking
+for (j=N-2;j>-1;j=j-1)begin
+	StateBacktracking[j]=HistoryTable[StateBT][j+1];
+	StateBT=StateBacktracking[j];
+end
+
+for (s=0;s<N;s=s+1)begin
+	if (StateBacktracking[s]<4)begin
+		DecodedSymbol[s]=0;
+	end
+	else begin
+		DecodedSymbol[s]=1;
+	end
+end
+
+
+end
+endmodule
+
